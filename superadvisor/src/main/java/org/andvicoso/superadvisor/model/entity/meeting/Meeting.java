@@ -10,43 +10,24 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.Past;
 
 import org.andvicoso.superadvisor.model.entity.AbstractEntity;
-import org.andvicoso.superadvisor.model.entity.IPlace;
-import org.andvicoso.superadvisor.model.entity.academic.user.Student;
-import org.andvicoso.superadvisor.model.entity.academic.user.Professor;
+import org.andvicoso.superadvisor.model.entity.Place;
+import org.andvicoso.superadvisor.model.entity.user.User;
 
 @Entity
 @Table(name = "meeting")
 public class Meeting extends AbstractEntity implements Comparable<Date> {
 
-	private Set<Student> advisees;
-
-	private Professor advisor;
-	
+	private User requester;
+	private Set<User> participants;
 	private String subject;
 
 	@Temporal(value = TemporalType.DATE)
-	@Past(message = "Selecione uma data de nascimento válida.")
+	@Past(message = "Selecione uma data válida.")
 	private Date date;
 
-	private IPlace place;
+	private Place place;
 
 	private Integer durationInMin;
-
-	public Set<Student> getAdvisees() {
-		return advisees;
-	}
-
-	public void setAdvisees(Set<Student> advisees) {
-		this.advisees = advisees;
-	}
-
-	public Professor getAdvisor() {
-		return advisor;
-	}
-
-	public void setAdvisor(Professor advisor) {
-		this.advisor = advisor;
-	}
 
 	public Date getDate() {
 		return date;
@@ -56,11 +37,11 @@ public class Meeting extends AbstractEntity implements Comparable<Date> {
 		this.date = date;
 	}
 
-	public IPlace getPlace() {
+	public Place getPlace() {
 		return place;
 	}
 
-	public void setPlace(IPlace place) {
+	public void setPlace(Place place) {
 		this.place = place;
 	}
 
@@ -83,6 +64,22 @@ public class Meeting extends AbstractEntity implements Comparable<Date> {
 
 	public void setSubject(String subject) {
 		this.subject = subject;
+	}
+
+	public User getRequester() {
+		return requester;
+	}
+
+	public void setRequester(User requester) {
+		this.requester = requester;
+	}
+
+	public Set<User> getParticipants() {
+		return participants;
+	}
+
+	public void setParticipants(Set<User> participants) {
+		this.participants = participants;
 	}
 
 }

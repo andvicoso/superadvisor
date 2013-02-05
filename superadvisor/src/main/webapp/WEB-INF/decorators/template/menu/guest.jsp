@@ -5,3 +5,4 @@
 
 <li class="active"><a href="content/login/login.jsp">Login</a></li>
 <li class="active"><a href="content/guest/add.jsp">Add</a></li>
+<li class="active"><a href="content/guest/list.jsp">List</a></li>

@@ -7,7 +7,7 @@ import org.andvicoso.superadvisor.model.entity.address.Address;
 
 @Entity
 @Table(name = "common_place")
-public class CommonPlace implements IPlace {
+public class CommonPlace implements Place {
 
 	private Address address;
 	private String name;

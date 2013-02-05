@@ -8,31 +8,31 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 import org.andvicoso.superadvisor.model.entity.AbstractEntity;
-import org.andvicoso.superadvisor.model.entity.user.AbstractUser;
+import org.andvicoso.superadvisor.model.entity.user.User;
 
 @Entity
 @Table(name = "message")
 public class Message extends AbstractEntity {
-	private AbstractUser from;
-	private Set<AbstractUser> to;
+	private User from;
+	private Set<User> to;
 	private String subject;
 	private String text;
 	private Collection<Attachment> attachments;
 	private Date date;
 
-	public AbstractUser getFrom() {
+	public User getFrom() {
 		return from;
 	}
 
-	public void setFrom(AbstractUser from) {
+	public void setFrom(User from) {
 		this.from = from;
 	}
 
-	public Set<AbstractUser> getTo() {
+	public Set<User> getTo() {
 		return to;
 	}
 
-	public void setTo(Set<AbstractUser> to) {
+	public void setTo(Set<User> to) {
 		this.to = to;
 	}
 

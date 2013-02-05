@@ -6,7 +6,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" output="target/m2e-wtp/web-resources" path="src/main/webapp"/>
+	<classpathentry excluding="content/" kind="src" output="target/m2e-wtp/web-resources" path="src/main/webapp"/>
 	<classpathentry including="**/*.java" kind="src" output="target/test-classes" path="src/test/resources"/>
 	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
 		<attributes>

@@ -1,54 +1,49 @@
 package org.andvicoso.superadvisor.model.entity.academic.supervision;
 
-import java.util.Collection;
 import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
 import org.andvicoso.superadvisor.model.entity.AbstractEntity;
-import org.andvicoso.superadvisor.model.entity.academic.user.Student;
-import org.andvicoso.superadvisor.model.entity.academic.user.Professor;
-import org.andvicoso.superadvisor.model.entity.academic.work.AcademicWork;
-import org.andvicoso.superadvisor.model.entity.meeting.Meeting;
+import org.andvicoso.superadvisor.model.entity.academic.Degree;
+import org.andvicoso.superadvisor.model.entity.user.User;
 
 @Entity
 @Table(name = "supervision")
 public class Supervision extends AbstractEntity {
 
 	private String theme;
-	private Professor advisor;
-	private Professor coadvisor;
-	private Student advisee;
+	private User supervisor;
+	private User co_supervisor;
+	private User student;
 	private Degree pursuedDegree;
 	private Date start;
 	private Date end;
 	private Date max;
-	private Collection<Meeting> meetings;
-	private Collection<AcademicWork> academicWorks;
 
-	public Professor getCoadvisor() {
-		return coadvisor;
+	public User getSupervisor() {
+		return supervisor;
 	}
 
-	public void setCoadvisor(Professor coadvisor) {
-		this.coadvisor = coadvisor;
+	public void setSupervisor(User supervisor) {
+		this.supervisor = supervisor;
 	}
 
-	public Professor getAdvisor() {
-		return advisor;
+	public User getCo_supervisor() {
+		return co_supervisor;
 	}
 
-	public void setAdvisor(Professor advisor) {
-		this.advisor = advisor;
+	public void setCo_supervisor(User co_supervisor) {
+		this.co_supervisor = co_supervisor;
 	}
 
-	public Student getAdvisee() {
-		return advisee;
+	public User getStudent() {
+		return student;
 	}
 
-	public void setAdvisee(Student advisee) {
-		this.advisee = advisee;
+	public void setStudent(User student) {
+		this.student = student;
 	}
 
 	public Degree getPursuedDegree() {
@@ -81,14 +76,6 @@ public class Supervision extends AbstractEntity {
 
 	public void setMax(Date max) {
 		this.max = max;
-	}
-
-	public Collection<Meeting> getMeetings() {
-		return meetings;
-	}
-
-	public void setMeetings(Collection<Meeting> meetings) {
-		this.meetings = meetings;
 	}
 
 	public String getTheme() {

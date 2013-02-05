@@ -1,4 +1,4 @@
-package org.andvicoso.superadvisor.model.entity.academic.conference;
+package org.andvicoso.superadvisor.model.entity.academic.publication.conference;
 
 import java.util.Collection;
 import java.util.Date;

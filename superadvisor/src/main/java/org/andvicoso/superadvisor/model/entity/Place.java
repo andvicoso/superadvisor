@@ -2,7 +2,7 @@ package org.andvicoso.superadvisor.model.entity;
 
 import org.andvicoso.superadvisor.model.entity.address.Address;
 
-public interface IPlace {
+public interface Place {
 
 	public Address getAddress();
 

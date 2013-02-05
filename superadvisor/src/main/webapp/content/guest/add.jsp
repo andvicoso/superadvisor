@@ -7,9 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form class="form-horizontal">
-		<fieldset>
-			<legend>Controls Bootstrap supports</legend>
+	<div class="container">
+		<form class="form-horizontal">
 			<div class="control-group">
 				<label class="control-label" for="input01">Text input</label>
 				<div class="controls">
@@ -64,10 +63,10 @@
 				</div>
 			</div>
 			<div class="form-actions">
-				<button type="submit" class="btn btn-primary">Save changes</button>
+				<button type="submit" class="btn btn-primary">Save</button>
 				<button class="btn">Cancel</button>
 			</div>
-		</fieldset>
-	</form>
+		</form>
+	</div>
 </body>
 </html>

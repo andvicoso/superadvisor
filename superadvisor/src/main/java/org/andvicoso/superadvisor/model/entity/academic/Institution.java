@@ -5,13 +5,13 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 import org.andvicoso.superadvisor.model.entity.AbstractEntity;
-import org.andvicoso.superadvisor.model.entity.IPlace;
+import org.andvicoso.superadvisor.model.entity.Place;
 import org.andvicoso.superadvisor.model.entity.address.Address;
 import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 @Table(name = "institution")
-public class Institution extends AbstractEntity implements IPlace {
+public class Institution extends AbstractEntity implements Place {
 	private Address address;
 
 	@Column(nullable = false)

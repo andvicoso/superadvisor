@@ -1,19 +1,19 @@
-package org.andvicoso.superadvisor.model.entity.academic.conference;
+package org.andvicoso.superadvisor.model.entity.academic.publication.conference;
 
 import org.andvicoso.superadvisor.model.entity.AbstractEntity;
-import org.andvicoso.superadvisor.model.entity.academic.user.AcademicUser;
+import org.andvicoso.superadvisor.model.entity.academic.profile.AcademicProfile;
 
 public class ConferenceParticipation extends AbstractEntity {
 
-	private AcademicUser participant;
+	private AcademicProfile participant;
 	private ConferenceRole role;
 	private Conference conference;
 
-	public AcademicUser getParticipant() {
+	public AcademicProfile getParticipant() {
 		return participant;
 	}
 
-	public void setParticipant(AcademicUser participant) {
+	public void setParticipant(AcademicProfile participant) {
 		this.participant = participant;
 	}
 

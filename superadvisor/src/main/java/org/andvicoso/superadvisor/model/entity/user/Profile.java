@@ -4,13 +4,18 @@ import java.util.Date;
 
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.Past;
 
 import org.andvicoso.superadvisor.model.Gender;
+import org.andvicoso.superadvisor.model.entity.address.Address;
 
 public class Profile {
+
+	@OneToOne
+	private Address address;
 
 	@Enumerated(EnumType.STRING)
 	private Gender gender;
@@ -33,6 +38,14 @@ public class Profile {
 
 	public void setGender(Gender gender) {
 		this.gender = gender;
+	}
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
 	}
 
 }

@@ -21,6 +21,7 @@ public class Supervision extends AbstractEntity {
 	private Date start;
 	private Date end;
 	private Date max;
+	private Boolean finished = false;
 
 	public User getSupervisor() {
 		return supervisor;
@@ -84,6 +85,14 @@ public class Supervision extends AbstractEntity {
 
 	public void setTheme(String theme) {
 		this.theme = theme;
+	}
+
+	public Boolean getFinished() {
+		return finished;
+	}
+
+	public void setFinished(Boolean finished) {
+		this.finished = finished;
 	}
 
 }

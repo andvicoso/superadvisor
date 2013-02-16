@@ -1,17 +1,26 @@
 package org.andvicoso.superadvisor.model.entity.academic.text;
 
-import org.andvicoso.superadvisor.model.entity.academic.profile.AcademicProfile;
+import org.andvicoso.superadvisor.model.entity.user.User;
 
-public abstract class AcademicDegreeText {
+public abstract class AcademicDegreeText extends AcademicText {
 
-	private AcademicProfile author;
+	private AcademicDegreeTextType type;
+	private User author;
 
-	public AcademicProfile getAuthor() {
+	public User getAuthor() {
 		return author;
 	}
 
-	public void setAuthor(AcademicProfile author) {
+	public void setAuthor(User author) {
 		this.author = author;
+	}
+
+	public AcademicDegreeTextType getType() {
+		return type;
+	}
+
+	public void setType(AcademicDegreeTextType type) {
+		this.type = type;
 	}
 
 }

@@ -21,11 +21,11 @@ public class Meeting extends AbstractEntity implements Comparable<Date> {
 	private Set<User> participants;
 	private String subject;
 
+	private Place place;
+
 	@Temporal(value = TemporalType.DATE)
 	@Past(message = "Selecione uma data válida.")
 	private Date date;
-
-	private Place place;
 
 	private Integer durationInMin;
 
